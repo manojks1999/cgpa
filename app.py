@@ -77,7 +77,7 @@ password1=(password.val())
 username1=db.child("marks").get().val()
 print(username1)
 
-def upmarks(usn,sub1,sub2,sub3,sub4,sub5,sub6,total):
+def upmarks(usn,sub1,sub2,sub3,sub4,sub5,sub6,lab1,lab2,total):
 	db.child("marks").child(usn).push([{"sub1":sub1},{"sub2":sub2},{"sub3":sub3},{"sub4":sub4},{"sub5":sub5},{"sub6":sub6},{"lab1":lab1},{"lab2":lab2},{"total":total}])
 
 """usn="4AI17IS031"
@@ -255,6 +255,7 @@ def res():
 				print(result)
 				if usn!="":
 					upmarks(usn,sub1,sub2,sub3,sub4,sub5,sub6,lab1,lab2,result)
+					print("No prob")
 			except Exception as e:
 				return render_template('index.html',pred='Please input correct value')
 			print(result)
@@ -269,7 +270,7 @@ def res():
 				result=round(result*10,2)
 				print(result)
 				if usn!="":
-					upmarks(usn,sub1,sub2,sub3,sub4,sub5,sub6,result)
+					upmarks(usn,sub1,sub2,sub3,sub4,sub5,sub6,lab1,lab2,result)
 			except Exception as e:
 				return render_template('ece.html',pred='Please input correct value')
 			print(result)
@@ -283,7 +284,7 @@ def res():
 				print(result*10)
 				result=round(result*10,2)
 				if usn!="":
-					upmarks(usn,sub1,sub2,sub3,sub4,sub5,sub6,result)
+					upmarks(usn,sub1,sub2,sub3,sub4,sub5,sub6,lab1,lab2,result)
 			except Exception as e:
 				return render_template('cse.html',pred='Please input correct value')
 			print(result)
@@ -297,7 +298,7 @@ def res():
 				print(result*10)
 				result=round(result*10,2)
 				if usn!="":
-					upmarks(usn,sub1,sub2,sub3,sub4,sub5,sub6,result)
+					upmarks(usn,sub1,sub2,sub3,sub4,sub5,sub6,lab1,lab2,result)
 			except Exception as e:
 				return render_template('me.html',pred='Please input correct value')
 			print(result)
@@ -312,7 +313,7 @@ def res():
 				result=round(result*10,2)
 				print(result)
 				if usn!="":
-					upmarks(usn,sub1,sub2,sub3,sub4,sub5,sub6,result)
+					upmarks(usn,sub1,sub2,sub3,sub4,sub5,sub6,lab1,lab2,result)
 			except Exception as e:
 				return render_template('ce.html',pred='Please input correct value')
 			print(result)
@@ -326,7 +327,7 @@ def res():
 				print(result*10)
 				result=round(result*10,2)
 				if usn!="":
-					upmarks(usn,sub1,sub2,sub3,sub4,sub5,sub6,result)
+					upmarks(usn,sub1,sub2,sub3,sub4,sub5,sub6,lab1,lab2,result)
 			except Exception as e:
 				return render_template('eee.html',pred='Please input correct value')
 			print(result)
