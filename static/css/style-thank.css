@@ -1,0 +1,13 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #2ecc71;
+}
+p{
+  color: black;
+  text-transform: uppercase;
+  font-weight: 3000px;
+  font-style: bold;
+  font-size: 100px;
+}
